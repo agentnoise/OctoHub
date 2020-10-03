@@ -1,0 +1,71 @@
+/*Standardized elements*/
+html
+{
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+*, *:before, *:after
+{
+    box-sizing: inherit;
+}
+body
+{
+    display: flex;
+    flex: 1;
+    font-size: calc(1rem + 1vw);
+    flex-direction: column;
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul
+{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+ol, ul
+{
+    list-style: none;
+}
+
+img
+{
+    height: auto;
+}
+
+
+/* Styling */
+.main-header
+{
+    background-color: aqua;
+    padding: 1em .5em .25em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header .logo
+{
+    width: 250px;
+}
+.main-header .account
+{
+    align-self: flex-start;
+}
+main
+{
+    background-color: burlywood;
+    display: flex;
+    flex: 1;
+}
+.content
+{
+    flex: 1;
+}
+aside
+{
+    background-color: chartreuse;
+    flex: .20;
+}
