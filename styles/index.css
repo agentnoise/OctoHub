@@ -37,7 +37,7 @@ img
 
 
 /* Styling */
-.main-header
+.page-header
 {
     background-color: aqua;
     padding: 1em .5em .25em;
@@ -45,15 +45,15 @@ img
     align-items: center;
     justify-content: space-between;
 }
-
-.main-header .logo
+.page-header .logo
 {
     width: 250px;
 }
-.main-header .account
+.page-header .account
 {
     align-self: flex-start;
 }
+
 main
 {
     background-color: burlywood;
@@ -63,6 +63,8 @@ main
 .content
 {
     flex: 1;
+    padding: 1%;
+
 }
 aside
 {
@@ -71,16 +73,44 @@ aside
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: .30;
+    flex: .20;
 }
 aside .control-button-upload
 {
-    width: 30%;
-    height: 20%;
+    width: 20%;
+    height: 10%;
 }
-
 aside .control-button-add
 {
-    width: 30%;
-    height: 20%;
+    width: 20%;
+    height: 10%;
+}
+.printer-card
+{
+    width: 45%;
+    height: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: blueviolet;
+}
+
+.printer-card .card-image
+{
+    width: 45%;
+    height:  45%;
+    align-self: flex-start;
+    padding-right: 10px;
+}
+
+.printer-card .card-printing-status
+{
+    width: 35%;
+    height: 35%;
+    font-size: calc(1rem + .5vw);
+}
+
+.printer-card .card-temperature
+{
+    align-self: flex-end;
 }
