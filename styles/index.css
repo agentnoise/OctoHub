@@ -68,14 +68,19 @@ aside
 {
     background-color: chartreuse;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex: .20;
+    align-items: center;
+    flex: .30;
 }
-.control-button
+aside .control-button-upload
 {
-    text-align: center;
-    text-justify: center;
-    display: flex;
-    flex: .6; 
+    width: 30%;
+    height: 20%;
+}
+
+aside .control-button-add
+{
+    width: 30%;
     height: 20%;
 }
