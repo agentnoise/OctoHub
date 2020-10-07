@@ -33,12 +33,57 @@
 
         <main> 
             <div class="content">
-                <div class="printer-card">
-                    <img class="card-image" src="assets/octolapse.webp"></img>
-                    <div class="card-printing-status">Status: <br> Printing: <br> Run Time: <br> Time Left:</div>
-                    <input class="card-temperature" type="number" label="Bed"></div>
-                    <div class="card-control-panel"></div>
-                </div>        
+                <details class="card printer">
+                    <summary>
+                        <div class="description">
+                            <div class="overview">
+                                <img class="icon" src=""/>
+                                <div class="name"></div>
+                                <ul class="modules">
+                                    <li>test</li>
+                                    <li>test 2</li>
+                                </ul>
+                                <button class="stop">
+                                    <img class="icon" src=""/>
+                                    <span class="label">STOP!</span>
+                                </button>
+                            </div>
+                            <div class="current-file">
+                                <div class="filename">
+                                    <div class="label"></div>
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="state"></div>
+                    </summary>
+                    <div class="container">
+                        <ul class="modules">
+                            <li class="module stream">
+                                <h3>Stream</h3>
+                                <img class="card-image" src="assets/octolapse.webp"/>
+                            </li>
+                            <li class="module files">
+                                <h3>Files</h3>
+                                <div class="container">
+                                    <div>
+                                        <div class="search"></div>
+                                        <table class="files"></table>
+                                    </div>
+                                    <div class="actions"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="status"></div>
+                        
+                        <div class="card-printing-status">Status: <br> Printing: <br> Run Time: <br> Time Left:</div>
+                        <input class="card-temperature" type="number" label="Bed"/>
+                        
+                        <details class="printer-controls">
+                            <summary>Control</summary>
+                        </details>
+                    </div>    
+                </details>  
             </div>
             <aside>
                 <!-- <button class="control-button" type=button> Add Printer</button> -->
