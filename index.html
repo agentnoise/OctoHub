@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Octo</title>
+        <title>OctoHub</title>
         <meta name="description" content="Octoprint Farming">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/index.css">
@@ -28,7 +28,18 @@
         <header class="page-header">
             <img class="logo" src="./Assets/TL3D Logo - 2 Grays.png"/>
             <span class="title">OctoHub</span>
-            <button class="account" type="button">Account</button>
+            <div class="buttons">
+                <button class="button account" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z"/></svg>
+                </button>
+                <!-- <input class="upload" type="image" alt="Upload" src="assets/upload.svg"> -->
+                <button class="button add" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 10h-5l9-10 9 10h-5v10h-8v-10zm11 9v3h-14v-3h-2v5h18v-5h-2z"/></svg>
+                </button>
+                <button class="button upload" type="button" alt="add printer" src="assets/add.png"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z"/></svg>
+                </button>
+            </div>
         </header>
 
         <main> 
@@ -85,11 +96,6 @@
                     </div>    
                 </details>  
             </div>
-            <aside>
-                <!-- <button class="control-button" type=button> Add Printer</button> -->
-                 <input class="control-button-upload" type="image" alt="Upload" src="assets/upload.png">
-                <input class="control-button-add" type="image" alt="add printer" src="assets/add.png">
-            </aside>
         </main>
     </body>
 </html>
