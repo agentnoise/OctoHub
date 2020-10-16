@@ -21,7 +21,7 @@ body
 }
 body, h1, h2, h3, h4, h5, h6, p, ol, ul
 {
-    color: #dddddd;
+    color: #9b8989;
     margin: 0;
     padding: 0;
     font-weight: normal;
@@ -35,16 +35,10 @@ img
 {
     height: auto;
 }
-label
-{
-    color: #dddddd;
-}
-.label
-{
-    text-align: center;
-}
+
 button
 {
+    color: #9b8989;
     width: 100px;
     height: 40px;
     background-color: var(--purple);
@@ -83,34 +77,29 @@ button
 .page-header .controls
 {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: 50px;
-    grid-template-areas: 
-    "a a a a b b b b"
-    "c c c c d d d d";
-    flex: .2;
-    width: 20%;
-    height: 100%;
-    
+    grid-auto-rows: 26px;
+    flex: .2; 
 }
 .button.account
 {
     align-self: start;
-    grid-column: 10;
+    grid-column: 2;
 }
 .button.add
 {
     align-self: end;
-    grid-column: 8;
-    grid-row: 3;
+    grid-column: 2;
+    grid-row: 2;
     background-color: var(--green);
 }
 .button.upload
 {
     align-self: end;
-    grid-column: 10;
-    grid-row: 3;
+    grid-column: 1;
+    grid-row: 2;
     background-color: var(--maroon);
 }
 /* .button > svg
@@ -162,57 +151,80 @@ main
 
 .card.printer
 {
-    color: #dddddd;
-    display: flex;
     flex-basis: 300px;
     flex-direction: row;
     flex-grow: .3;
     background-color: rgba(0, 0, 0, 0.33);
-    box-shadow: 2px 1px 7px 1px rgba(0, 0, 0, .3);
     border: solid 1px rgba(0, 0, 0, .75);
-    border-radius: 12px;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px 1px green;        
 }
 .preview
 {
-    display: grid;
-    grid-auto-columns: minmax(100px, 100px);
-    grid-auto-rows: minmax(70px, 70px);
-    grid-template-areas: 
-    "a a b b c c d d"
-    "e e f f g g h h";
-    /* s"i j k k l l m m"; */
-    /* display: inline-flex; */
+    display: flex;
+    flex-basis: 100%;
 }
-.overview .name
+ .description
+ {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 2fr;
+     grid-template-rows: 34px 16px 16px;
+     grid-gap: 10px;
+     padding: 10px;
+     flex: 1;
+ }
+.overview
 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-column: 1 / 5;
+}
+.icon
+{
+    flex: .45;
+}
+.name
+{
+    display: flex;
     align-self: center;
+    font-size: calc(.75rem + 1vw);
+    grid-row: 1;
+    grid-column: 1;
 }
-.overview.modules
+.modules
 {
-    align-self: flex-end;
+    display: inline-flex;
+    align-self: center; 
+    grid-row: 1;
+    grid-column: 2 / 4;
 }
 .current-file
 {
-    grid-column: 1/7;
+    display: inline-flex;
+    grid-column: 1/5;
     grid-row: 2;
-    align-self: start;
-    font-size: calc(.5rem + 1vw);
+    align-self: center;
+    height: 100%;
+    align-items: center;
+    font-size: calc(.5rem + .75vw);
 }
+
 .button.stop
 {
     background-color: rgb(114, 4, 4);
-    grid-column: 7/10;
-    grid-row: 1 / 3;
-    align-self: center;
-    width: 85%;
-    height: 65%;
+    grid-column: 5;
+    grid-row: 1/4;
+    height: 100%;
 }
 .state
 {
-    /* display: flex; */
-    grid-column: 9;
-    grid-row: 1 / 3;
-    justify-self: right;
+    background-color: green;
+    padding-left: 10px;
+    grid-row: 1/3;
+    grid-column: 10;
+    height: 100%;
+    width: 100%;
 }
 #status-light
 {
@@ -220,22 +232,13 @@ main
     stroke: green !important;
 
 }
-
-
-/* .printer-card .card-image
+.progress
 {
-    width: 50%;
-    height:  45%;
-    align-self: flex-start;
-    padding-right: 30px;
+    display: flex;
+    grid-row: 3;
+    grid-column: 1/5;
 }
-.printer-card .card-printing-status
+.bar
 {
-    width: 35%;
-    height: 45%;
-    font-size: calc(1rem + .5vw);
+    flex: 1;
 }
-.printer-card .card-temperature
-{ 
-    align-self: baseline;
-} */
