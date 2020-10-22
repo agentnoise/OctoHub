@@ -39,15 +39,17 @@ img
 button
 {
     color: #9b8989;
-    width: 100px;
-    height: 40px;
+    height: calc(1.5rem + 1vw);
+    width: calc(4.5rem + 1vw);
     background-color: var(--purple);
     box-shadow: 2px 1px 7px 1px rgba(0, 0, 0, .3);
     border: none;
-    border-radius:  12px;
-    padding: 0;
-    
+    border-radius:  12px;    
 }
+/* button>svg
+{
+    display: flex;
+} */
 
 /* Styling */
 :root
@@ -81,39 +83,28 @@ button
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
     grid-auto-rows: 26px;
-    flex: .2; 
+    justify-content: left;
 }
 .button.account
 {
-    align-self: start;
     grid-column: 2;
 }
 .button.add
 {
-    align-self: end;
     grid-column: 2;
     grid-row: 2;
     background-color: var(--green);
 }
 .button.upload
 {
-    align-self: end;
     grid-column: 1;
     grid-row: 2;
     background-color: var(--maroon);
 }
 /* .button > svg
 {
-    background: none;
-    border: none;
-    padding: 0;
-    width: 50px;
-    height: 50px;  
-    align-self: end; 
-     grid-column: 5;
-    grid-row: 3; 
-    grid-column: 10;
-    grid-row: 3;
+    height: calc(1.5rem + 1vw);
+    width: calc(5rem + 1vw);
 } */
 /* button > img
 ,button > svg
@@ -145,14 +136,13 @@ main
     flex-wrap: wrap;
     align-items: flex-start;
     flex: 1;
-    padding: 1%;
+    padding: 3%;
     background-image: repeating-linear-gradient(45deg, rgba(58,77,12, 0.24) 0px, rgba(58,77,12, 0.24) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(135deg, rgba(58,77,12, 0.24) 0px, rgba(58,77,12, 0.24) 1px,transparent 1px, transparent 13px),linear-gradient(90deg, rgb(33,13,79),rgb(77,12,58));
 }
 
 .card.printer
 {
     flex-basis: 300px;
-    flex-direction: row;
     flex-grow: .3;
     background-color: rgba(0, 0, 0, 0.33);
     border: solid 1px rgba(0, 0, 0, .75);
@@ -162,7 +152,6 @@ main
 .preview
 {
     display: flex;
-    flex-basis: 100%;
 }
  .description
  {
@@ -175,9 +164,8 @@ main
  }
 .overview
 {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    /* display: flex;
+    align-items: flex-end; */
     grid-column: 1 / 5;
 }
 .icon
@@ -186,28 +174,33 @@ main
 }
 .name
 {
-    display: flex;
     align-self: center;
-    font-size: calc(.75rem + 1vw);
-    grid-row: 1;
-    grid-column: 1;
+    font-size: calc(1rem + .85vw);
+    padding-right: 5%;
 }
-.modules
+.temperatures
 {
     display: inline-flex;
     align-self: center; 
-    grid-row: 1;
-    grid-column: 2 / 4;
+    align-items: center;
+    font-size: calc(.75rem + .35vw);
+
+}
+.temperatures .temperature
+{
+    padding-right: 5px;
+}
+.temperatures>input
+{
+    width: calc(3rem + .35vw);
 }
 .current-file
 {
     display: inline-flex;
     grid-column: 1/5;
     grid-row: 2;
-    align-self: center;
-    height: 100%;
     align-items: center;
-    font-size: calc(.5rem + .75vw);
+    font-size: calc(.75rem + .35vw);
 }
 
 .button.stop
@@ -216,21 +209,6 @@ main
     grid-column: 5;
     grid-row: 1/4;
     height: 100%;
-}
-.state
-{
-    background-color: green;
-    padding-left: 10px;
-    grid-row: 1/3;
-    grid-column: 10;
-    height: 100%;
-    width: 100%;
-}
-#status-light
-{
-    fill: green !important;
-    stroke: green !important;
-
 }
 .progress
 {
@@ -242,3 +220,30 @@ main
 {
     flex: 1;
 }
+.operations
+{
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 1%;
+    width: 100%
+}
+.operations>button
+{
+    margin: 5px;
+}
+
+.container.expanded
+{
+    display: flex;
+}
+.file-view
+{
+    flex: .9;
+}
+.operations.files
+{
+    flex-direction: column;
+    flex: .1;
+    padding: 5px;
+}
+
