@@ -164,8 +164,6 @@ main
  }
 .overview
 {
-    /* display: flex;
-    align-items: flex-end; */
     grid-column: 1 / 5;
 }
 .icon
@@ -238,6 +236,7 @@ main
 }
 .file-view
 {
+    display: flex;
     flex: .9;
 }
 .operations.files
@@ -246,4 +245,3 @@ main
     flex: .1;
     padding: 5px;
 }
-
