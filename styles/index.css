@@ -61,7 +61,7 @@ button
 }
 .page-header
 {
-    background-color: #0a001f;
+    background-color: #2C0616;
     padding: .25em .5em .25em;
     box-shadow: 2px 1px 7px 1px rgba(0, 0, 0, .3);
     display: flex;
@@ -76,30 +76,35 @@ button
 {
     width: 150px;
 }
-.page-header .controls
-{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: 26px;
-    justify-content: left;
-}
-.button.account
-{
-    grid-column: 2;
-}
+
 .button.add
 {
-    grid-column: 2;
-    grid-row: 2;
     background-color: var(--green);
 }
 .button.upload
 {
-    grid-column: 1;
-    grid-row: 2;
     background-color: var(--maroon);
+}
+
+.control-panel
+{
+    flex: .15;
+    background-color: #2C0616;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;    
+}
+.control-panel .controls
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+}
+.controls > button
+{
+    margin: 10px;
 }
 /* .button > svg
 {
@@ -136,7 +141,7 @@ main
     flex-wrap: wrap;
     align-items: flex-start;
     flex: 1;
-    padding: 3%;
+    padding: 30px;
     background-image: radial-gradient(circle at 77% 43%, rgba(168, 168, 168,0.04) 0%, rgba(168, 168, 168,0.04) 50%,rgba(10, 10, 10,0.04) 50%, rgba(10, 10, 10,0.04) 100%),radial-gradient(circle at 33% 65%, rgba(248, 248, 248,0.04) 0%, rgba(248, 248, 248,0.04) 50%,rgba(228, 228, 228,0.04) 50%, rgba(228, 228, 228,0.04) 100%),radial-gradient(circle at 92% 79%, rgba(152, 152, 152,0.04) 0%, rgba(152, 152, 152,0.04) 50%,rgba(28, 28, 28,0.04) 50%, rgba(28, 28, 28,0.04) 100%),radial-gradient(circle at 91% 13%, rgba(41, 41, 41,0.04) 0%, rgba(41, 41, 41,0.04) 50%,rgba(214, 214, 214,0.04) 50%, rgba(214, 214, 214,0.04) 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
 }
 
@@ -147,11 +152,8 @@ main
     background-color: rgba(0, 0, 0, 0.33);
     border: solid 1px rgba(0, 0, 0, .75);
     border-radius: 24px;   
-    animation: neon 2.5s ease-in-out infinite alternate;     
-}
-.status-glow
-{
-    flex: 1;
+    animation: neon 2.5s ease-in-out infinite alternate;   
+    padding: 5px;  
 }
 .preview
 {
@@ -178,7 +180,7 @@ main
 {
     align-self: center;
     font-size: calc(1rem + .85vw);
-    padding-right: 5%;
+    padding-right: 10px;
 }
 .temperatures
 {
@@ -186,7 +188,6 @@ main
     align-self: center; 
     align-items: center;
     font-size: calc(.75rem + .35vw);
-
 }
 .temperatures .temperature
 {
@@ -228,7 +229,7 @@ main
 {
     display: inline-flex;
     justify-content: space-between;
-    padding: 1%;
+    padding: 5px;
     width: 100%
 }
 .operations>button
